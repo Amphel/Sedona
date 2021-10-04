@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <a class="emblem">
+          <img src="img/emblem.png" width="138" height="70" alt="City Emblem">
+        </a>
+        <ul class="header-navigation">
+          <li><a>Информация</a></li>
+          <li><a>Фото и видео</a></li>
+          <li><a>Карта штата</a></li>
+          <li><a>Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Гостиницы в городе Седона</h1>
+      <section class="filters">
+        <h2 class="">Фильтр гостиниц</h2>
+        <form class="filter">
+          <fieldset class="filter-infrastructure">
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter-option">
+                <label for="filter-swimming-pool">Бассейн</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-swimming-pool" type="checkbox">
+              </li>
+              <li class="filter-option">
+                <label for="filter-parking">Парковка</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-parking" type="checkbox">
+              </li>
+              <li class="filter-option">
+                <label for="filter-wifi">Wi-Fi</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-wifi" type="checkbox">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-property-type">
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <label for="filter-hotel">Гостиница</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-hotel" type="checkbox">
+              </li>
+              <li>
+                <label for="filter-motel"> Мотель</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-motel" type="checkbox">
+              </li>
+              <li>
+                <label for="filter-apartment">Апартаменты</label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-property-cost">
+            <legend>Стоимость в сутки(Р):</legend>
+            <span>От 0</span>
+            <span>До 3000</span>
+            <input class="filter-input filter-input-range" type="range" name="cost-per-day">
+          </fieldset>
+          <button class="button button-filter" type="submit">Показать</button>
+        </form>
+        <span>Найдено:</span>
+        <span class="sorting-result-number">3</span>
+      </section>
+      <section class="sorting">
+        <span>Сортировка:</span>
+        <ul class="sorting-parameters-list">
+          <li class="sort-parameter" rel="price">По цене</li>
+          <li class="sort-parameter" rel="type">По типу</li>
+          <li class="sort-parameter" rel="rate">По рейтингу</li>
+        </ul>
+        <button class="button button-sort" type="button">По возрастанию</button>
+        <button class="button button-sort" type="button">По убыванию</button>
+        <ul>
+          <li>
+            <img src="img/hotel-1.jpg" width="135" height="90" alt="Amara Resort and Spa">
+            <div class="sorting-item">
+              <h3>Amara Resort &amp; Spa</h3>
+              <span name="type">Гостиница</span>
+              <span>От <strong>4000</strong> Р.</span>
+              <a class="button" value="Подробнее">Подробнее</a>
+              <button>Забронировать</button>
+            </div>
+            <div class="sorting-rate">
+              <div class="star"></div>
+              <span>Рейтинг: <strong name="rate">8,5</strong></span>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel-2.jpg" width="135" height="90" alt="Desert Quail Inn">
+            <div class="sorting-item">
+              <h3>Desert Quail Inn</h3>
+              <span name="type">Мотель</span>
+              <span>От <strong>3000</strong> Р.</span>
+              <a class="button" value="Подробнее">Подробнее</a>
+              <button>Забронировать</button>
+            </div>
+            <div class="sorting-rate">
+              <div class="star"></div>
+              <span>Рейтинг: <strong name="rate">8,9</strong></span>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel-3.jpg" width="135" height="90" alt="Villas At Poco Diablo">
+            <div class="sorting-item">
+              <h3>Villas At Poco Diablo</h3>
+              <span name="type">Апартаменты</span>
+              <span>От <strong>2000</strong> Р.</span>
+              <a class="button" value="Подробнее">Подробнее</a>
+              <button>Забронировать</button>
+            </div>
+            <div class="sorting-rate">
+              <div class="star"></div>
+              <span>Рейтинг: <strong name="rate">9,2</strong></span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer-main">
+      <p class="footer-hashtag-sedona">&num;visitsedona</p>
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-button social-button-tw" href="https://twitter.com">Твиттер</a></li>
+          <li><a class="social-button social-button-f" href="https://facebook.com">Фейсбук</a></li>
+          <li><a class="social-button social-button-yt" href="https://youtube.com">Ютуб</a></li>
+        </ul>
+      </div>
+      <p class="footer-copyright">Website by
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+  </body>
+</html>

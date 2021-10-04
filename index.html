@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <a class="emblem">
+          <img src="img/emblem.png" width="138" height="70" alt="City Emblem">
+        </a>
+        <ul>
+          <li><a>Информация</a></li>
+          <li><a>Фото и видео</a></li>
+          <li><a>Карта штата</a></li>
+          <li><a>Гостиницы</a></li>
+        </ul>
+      </nav>
+      <div class="intro">
+        <div class="intro-welcome"></div>
+        <div class="intro-title"></div>
+        <div class="intor-text"></div>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Седона</h1>
+      <h2 class="page-intro">Седона &#8212; небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p class="page-intro-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <section class="reasons">
+        <h2 class="visually-hidden">Причины посетить Седону</h2>
+        <ol>
+          <li>
+            <div class="reason-item">
+              <h2 class="reason-title">Настоящий городок</h2>
+              <span class="reason-number">&numero;1</span>
+              <p class="reason-description">Седона &#8212; не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <ul class="features">
+              <li>
+                <h2 class="feature-title">Жилье</h2>
+                <p class="feature-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </li>
+              <li>
+                <h2 class="feature-title">Еда</h2>
+                <p class="feature-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <h2 class="feature-title">Сувениры</h2>
+                <p class="feature-description">Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="reason-item">
+              <h2 class="reason-title">Там есть мост дьявола</h2>
+              <span class="reason-number">&numero;2</span>
+              <p class="reason-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+          </li>
+          <li>
+            <div class="reason-item">
+              <h2 class="reason-title">Небольшая площадь</h2>
+              <span class="reason-number">&numero;3</span>
+              <p class="reason-description">Все достопримечательсности находятся очень близко</p>
+            </div>
+          </li>
+          <li>
+            <div class="reason-item">
+              <h2 class="reason-title">Красивая дорога</h2>
+              <span class="reason-number">&numero;4</span>
+              <p class="reason-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <li>
+            <div class="reason-item">
+              <h2 class="reason-title">Мало туристов</h2>
+              <span class="reason-number">&numero;5</span>
+              <p class="reason-description">Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="search-hotel">
+        <h2 class="visually-hidden">Найти гостиницу</h2>
+        <p class="search-hotel-title">Заинтересовалались?</p>
+        <p class="search-hotel-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button search-button">Поиск гостиницы в Седоне</button>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Местопложение Седоны на карте</h2>
+        <img src="img/map.jpg" width="1200" height="593" alt="Местоположение Седоны на карте">
+      </section>
+    </main>
+    <footer class="footer-main">
+      <p class="footer-hashtag-sedona">&num;visitsedona</p>
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-button social-button-tw" href="https://twitter.com">Твиттер</a></li>
+          <li><a class="social-button social-button-f" href="https://facebook.com">Фейсбук</a></li>
+          <li><a class="social-button social-button-yt" href="https://youtube.com">Ютуб</a></li>
+        </ul>
+      </div>
+      <p class="footer-copyright">Website by
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+    <section class="modal modal-search-hotel">
+      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+      <form class="search-hotel-form" method="POST" action="https://echo.htmlacademy.ru">
+        <p>
+          <label for="checkin-date">Дата заезда:</label>
+          <!-- <input  id="checkin-date" type="date" name="checkin" placeholder="24 апреля 2017"> -->
+          <input class="hotel-checkin-date" id="checkin-date" name="checkin" type="datetime-local" data-role="calendarpicker" value="24 апреля 2017" data-input-format="%d %m %y">
+        </p>
+        <p>
+          <label for="checkout-date">Дата выезда:</label>
+          <input class="hotel-checkout-date" id="checkout-date" name="checkout" type="datetime-local" data-role="calendarpicker" value="4 июля 2017" data-input-format="%d %m %y">
+          <!-- <input class="hotel-checkout-date" id="checkout-date" type="date" name="checkout" placeholder="4 июля 2017"> -->
+        </p>
+        <p>
+          <label for="adult-guests">Взрослые:</label>
+          <input class="hotel-guests-number" id="adult-guests" type="number" name="adults" min="0" step="1" value="2">
+        </p>
+        <p>
+          <label for="children-guests">Дети:</label>
+          <input class="hotel-guests-number" id="children-guests" type="number" name="children" min="0" step="1" value="0">
+        </p>
+      </form>
+    </section>
+  </body>
+</html>
