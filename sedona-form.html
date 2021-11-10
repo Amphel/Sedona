@@ -2,123 +2,159 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <title>Leave review of Sedona</title>
   </head>
-  <body>
+  <body class="page-container">
     <header class="header">
       <nav class="navigation">
         <a class="emblem">
           <img src="img/emblem.png" width="138" height="70" alt="City Emblem">
         </a>
-        <ul class="header-navigation">
-          <li><a>Информация</a></li>
-          <li><a>Фото и видео</a></li>
-          <li><a>Карта штата</a></li>
-          <li><a>Гостиницы</a></li>
+        <ul>
+          <div class="header-column">
+            <li><a>Информация</a></li>
+            <li><a href="sedona-photo.html">Фото и видео</a></li>
+          </div>
+          <div class="header-column">
+            <li><a href="#map_of_state">Карта штата</a></li>
+            <li><a href="sedona-hotels.html">Гостиницы</a></li>
+          </div>
         </ul>
       </nav>
-      <div class="intro">
-        <div class="intro-welcome visually-hidden"></div>
-        <div class="intro-title"></div>
-        <div class="intor-text visually-hidden"></div>
-      </div>
     </header>
-    <main>
-      <h1 class="visually-hidden">Оставить отзыв о Седоне</h1>
-      <h2 class="page-intro">Оставьте свой отзыв</h2>
-      <p class="page-intro-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <form class="review-form">
-        <fieldset class="review-general-impression">
-          <legend>Ваше общее впечатление:</legend>
-          <ul>
-            <li>
-              <input class="visually-hidden review-input review-input-radio" id="impression-positive" type="radio" checked>
-              <label for="impression-positive">Скорее положительное</label>
-            </li>
-            <li>
-              <input class="visually-hidden review-input review-input-radio" id="impression-negative" type="radio">
-              <label for="impression-negative">Скорее отрицательное</label>
-            </li>
-            <li>
-              <input class="visually-hidden review-input review-input-radio" id="impression-undefined" type="radio">
-              <label for="impression-undefined">Затрудняюсь ответить</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="review-user-introduction">
-          <legend>Представьтесь:</legend>
-          <ul>
-            <li>
-              <label for="introduction-name">Имя*:</label>
-              <input class="review-input review-input-text" id="introduction-name" name="name" type="text" placeholder="Петр" required>
-            </li>
-            <li>
-              <label for="introduction-surname">Фамилия*:</label>
-              <input class="review-input review-input-text" id="introduction-surname" name="surname" type="text" placeholder="Иванов" required>
-            </li>
-            <li>
-              <label for="introduction-patronymic-name">Отчество:</label>
-              <input class="review-input review-input-text" id="introduction-patronymic-name" name="patronymic-name" placeholder="Александрович" type="text">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="review-contact-info">
-          <legend>Контактная информация:</legend>
-          <ul>
-            <li>
-              <label for="user-phone">Телефон*:</label>
-              <input class="review-input review-input-text" id="user-phone" name="phone" type="text" placeholder="Введите телефон">
-            </li>
-            <li>
-              <label for="user-email">Электронная почта:</label>
-              <input class="review-input review-input-text" id="user-email" name="email" type="text" placeholder="Введите e-mail">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="review-visited-sights">
-          <legend>Посещенные достопримечательности</legend>
-          <ul>
-            <li>
-              <input class="visually-hidden review-input review-input-checkbox" id="review-devils-bridge" name="devils-bridge" type="checkbox" checked>
-              <label for="review-devils-bridge">Мост дьявола</label>
-            </li>
-            <li>
-              <input class="visually-hidden review-input review-input-checkbox" id="review-bell-mountain" name="bell-mountain" type="checkbox" checked>
-              <label for="bell-mountain">Гора-Колокол</label>
-            </li>
-            <li>
-              <input class="visually-hidden review-input review-input-checkbox" id="review-slide-park" name="slide-park" type="checkbox" checked>
-              <label for="slide-park">Слайд-парк</label>
-            </li>
-            <li>
-              <input class="visually-hidden review-input review-input-checkbox" id="review-red-cliffs" name="red-cliffs" type="checkbox">
-              <label for="review-red-cliffs">Красные скалы</label>
-            </li>
-            <fieldset class="review-emotions">
-              <legend>Опишите свои эмоции:</legend>
-              <textarea class="review-input review-input-textarea" name="emotions-description" id="review-emotions-description" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
-          </ul>
-        </fieldset>
-        <p>* &#8212; обязательные поля</p>
-        <input class="button button-review" type="submit" value="Отправить отзыв">
-      </form>
+    <section class="intro intro-inner">
+      <h2 class="visually-hidden">Седона</h2>
+      <img class="intro-title intro-title-inner" src="img/sedona.png" alt="sedona" width="458" height="78">
+      <img class="intro-bottom" src="img/shape_background.png" alt="" width="1200" height="57">
+    </section>
+    <main class="container">
+      <h1 class="visually-hidden">Форма для отзыва о Седоне</h1>
+      <section class="review">
+        <div class="section-description">
+          <h2 class="section-title">Оставьте свой отзыв</h2>
+          <p class="section-subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br>а также о посещенных вами достопримечательностях</p>
+        </div>
+        <form class="review-form">
+          <div class="review-impression-and-visitor">
+            <div class="review-column">
+              <fieldset class="review-general-impression">
+                <legend>Ваше общее впечатление:</legend>
+                <ul>
+                  <li>
+                    <input class="visually-hidden review-input review-input-radio" id="impression-positive" name="user_impression" type="radio" checked>
+                    <label for="impression-positive">Скорее положительное</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden review-input review-input-radio" id="impression-negative" name="user_impression" type="radio">
+                    <label for="impression-negative">Скорее отрицательное</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden review-input review-input-radio" id="impression-undefined" name="user_impression" type="radio">
+                    <label for="impression-undefined">Затрудняюсь ответить</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="review-column">
+              <fieldset class="review-user-introduction">
+                <legend>Представьтесь:</legend>
+                <ul>
+                  <li>
+                    <label for="introduction-name">Имя*:</label>
+                    <input class="review-input review-input-text" id="introduction-name" name="name" type="text" placeholder="Петр" required>
+                  </li>
+                  <li>
+                    <label for="introduction-surname">Фамилия*:</label>
+                    <input class="review-input review-input-text" id="introduction-surname" name="surname" type="text" placeholder="Иванов" required>
+                  </li>
+                  <li>
+                    <label for="introduction-patronymic-name">Отчество:</label>
+                    <input class="review-input review-input-text" id="introduction-patronymic-name" name="patronymic-name" placeholder="Александрович" type="text">
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+          <fieldset class="review-contact-info">
+            <legend>Контактная информация:</legend>
+            <ul>
+              <li>
+                <label for="user-phone">Телефон*:</label>
+                <input class="review-input review-input-text" id="user-phone" name="phone" type="text" placeholder="Введите телефон">
+              </li>
+              <li>
+                <label for="user-email">Электронная почта:</label>
+                <input class="review-input review-input-text" id="user-email" name="email" type="text" placeholder="Введите e-mail">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-visited-sights">
+            <legend>Посещенные <br> достопримечательности</legend>
+            <ul>
+              <li>
+                <input class="visually-hidden review-input review-input-checkbox" id="review-devils-bridge" name="devils-bridge" type="checkbox" checked>
+                <label for="review-devils-bridge">Мост дьявола</label>
+              </li>
+              <li>
+                <input class="visually-hidden review-input review-input-checkbox" id="review-bell-mountain" name="bell-mountain" type="checkbox" checked>
+                <label for="bell-mountain">Гора-Колокол</label>
+              </li>
+              <li>
+                <input class="visually-hidden review-input review-input-checkbox" id="review-slide-park" name="slide-park" type="checkbox" checked>
+                <label for="slide-park">Слайд-парк</label>
+              </li>
+              <li>
+                <input class="visually-hidden review-input review-input-checkbox" id="review-red-cliffs" name="red-cliffs" type="checkbox">
+                <label for="review-red-cliffs">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-emotions">
+            <legend>Опишите свои эмоции:</legend>
+            <textarea class="review-input review-input-textarea" name="emotions-description" id="review-emotions-description" cols="30" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <p>* &#8212; обязательные поля</p>
+          <input class="button button-review" type="submit" value="Отправить отзыв">
+        </form>
+      </section>
     </main>
-    <footer class="footer-main">
-      <p class="footer-hashtag-sedona">&num;visitsedona</p>
-      <div class="footer-social">
-        <ul>
-          <li><a class="social-button social-button-tw" href="https://twitter.com">Твиттер</a></li>
-          <li><a class="social-button social-button-f" href="https://facebook.com">Фейсбук</a></li>
-          <li><a class="social-button social-button-yt" href="https://youtube.com">Ютуб</a></li>
-        </ul>
-      </div>
+    <footer class="footer-main footer-inner container">
+      <p class="footer-hashtag-sedona"><a href="#">&num;visitsedona</a></p>
+      <ul class="footer-social">
+        <li><a class="social-button social-button-tw" href="https://twitter.com">Твиттер</a></li>
+        <li><a class="social-button social-button-f" href="https://facebook.com">Фейсбук</a></li>
+        <li><a class="social-button social-button-yt" href="https://youtube.com">Ютуб</a></li>
+      </ul>
       <p class="footer-copyright">Website by
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
+ 
+    <section class="modal-window" id="review-success">
+      <div class="modal-review-success">
+        <div class="section-description">
+          <h2 class="section-title">Ваш отзыв отправлен!</h2>
+          <p class="section-subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="button-background">
+          <button class="button button-modal-close" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-window" id="review-failure">
+      <div class="modal-review-failure">
+        <div class="section-description">
+          <h2 class="section-title">Что-то пошло<br>не так!</h2>
+          <p class="section-subtitle">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <button class="button button-modal-close" type="button">ОК</button>
+      </div>
+    </section>
   </body>
 </html>
